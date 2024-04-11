@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: first-microservice
+  name: first-microservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: first-microservice
+  template:
+    metadata:
+      labels:
+        app: first-microservice
+    spec:
+      containers:
+        - image: fabiog76/register-app-pipeline:latest
+          name: first-microservice
+
