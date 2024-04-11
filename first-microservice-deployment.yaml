@@ -15,6 +15,6 @@ spec:
         app: first-microservice
     spec:
       containers:
-        - image: fabiog76/register-app-pipeline:latest
+        - image: fabiog76/first-microservice:5.0
           name: first-microservice
 
